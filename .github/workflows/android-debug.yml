@@ -51,12 +51,6 @@ jobs:
       - name: Ensure Capacitor CLI available
         run: npx @capacitor/cli --version
 
-      - name: Add Android platform (if missing)
-        run: npx cap add android || true
-
-      - name: Copy web assets to Android project
-        run: npx cap copy android
-
       - name: Setup Android SDK (for Gradle)
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -64,6 +58,9 @@ jobs:
           target: default
           arch: x86_64
           force-avd-creation: false
+
+      - name: Add & sync Android platform
+        run: npx cap sync android
 
       - name: Ensure gradlew is executable
         run: chmod +x android/gradlew
