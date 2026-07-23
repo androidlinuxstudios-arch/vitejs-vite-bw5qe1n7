@@ -16,13 +16,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
 
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '11'
+
+      - name: Print Node & npm versions
+        run: |
+          node -v
+          npm -v
 
       - name: Cache npm
         uses: actions/cache@v4
@@ -35,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -f package-lock.json ]; then
-            npm ci
+            npm ci || npm install
           else
             npm install
           fi
