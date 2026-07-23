@@ -1,0 +1,353 @@
+/* =========================
+   NEON ASSAULT 2.0
+   VISUAL OVERHAUL
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body,
+#app{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#000;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Canvas */
+
+canvas{
+  position:fixed;
+  inset:0;
+  width:100vw;
+  height:100vh;
+  display:block;
+  background:
+    radial-gradient(circle at center,
+      #08111f 0%,
+      #030812 45%,
+      #000000 100%);
+}
+
+/* HUD */
+
+#hud{
+  position:fixed;
+  top:15px;
+  left:15px;
+  right:15px;
+
+  display:flex;
+  justify-content:space-between;
+
+  z-index:100;
+
+  pointer-events:none;
+}
+
+#score,
+#lives{
+
+  padding:10px 18px;
+
+  color:#00ffff;
+
+  font-size:24px;
+  font-weight:700;
+
+  border:2px solid rgba(0,255,255,.25);
+
+  background:rgba(0,0,0,.45);
+
+  backdrop-filter:blur(6px);
+
+  box-shadow:
+    0 0 10px rgba(0,255,255,.4),
+    inset 0 0 10px rgba(0,255,255,.15);
+
+  text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #00ffff;
+
+  border-radius:14px;
+}
+
+/* MENU */
+
+#menu{
+  position:fixed;
+  inset:0;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0,40,80,.25),
+      rgba(0,0,0,.88)
+    );
+
+  z-index:200;
+}
+
+/* GAME TITLE */
+
+#menu h1{
+
+  font-size:clamp(48px,8vw,100px);
+
+  letter-spacing:5px;
+
+  color:#00ffff;
+
+  margin-bottom:40px;
+
+  animation:
+    pulseTitle 2s ease-in-out infinite;
+
+  text-shadow:
+    0 0 10px #00ffff,
+    0 0 25px #00ffff,
+    0 0 50px #00ffff,
+    0 0 80px #00ffff;
+}
+
+@keyframes pulseTitle{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.05);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
+
+/* PLAY BUTTON */
+
+#play,
+#restart{
+
+  padding:18px 50px;
+
+  font-size:28px;
+  font-weight:900;
+
+  border:none;
+  border-radius:16px;
+
+  cursor:pointer;
+
+  color:#00141a;
+
+  background:linear-gradient(
+    180deg,
+    #7fffff,
+    #00ffff
+  );
+
+  transition:.2s;
+
+  box-shadow:
+    0 0 15px #00ffff,
+    0 0 30px #00ffff,
+    0 0 60px rgba(0,255,255,.5);
+}
+
+#play:hover,
+#restart:hover{
+
+  transform:
+    translateY(-3px)
+    scale(1.05);
+
+  box-shadow:
+    0 0 20px #00ffff,
+    0 0 50px #00ffff,
+    0 0 90px rgba(0,255,255,.8);
+}
+
+/* CREATOR TAG */
+
+#creator{
+
+  margin-top:25px;
+
+  font-size:22px;
+  font-weight:700;
+
+  animation:
+    rainbow 4s linear infinite;
+
+  text-shadow:
+    0 0 10px currentColor;
+}
+
+@keyframes rainbow{
+
+  0%{color:#ff4d4d;}
+  20%{color:#ffaa00;}
+  40%{color:#00ff99;}
+  60%{color:#00ffff;}
+  80%{color:#aa66ff;}
+  100%{color:#ff4d4d;}
+
+}
+
+/* GAME OVER */
+
+#gameover{
+
+  position:fixed;
+  inset:0;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  background:
+    rgba(0,0,0,.92);
+
+  z-index:300;
+}
+
+#gameover h1{
+
+  color:#ff3366;
+
+  font-size:clamp(50px,8vw,90px);
+
+  margin-bottom:20px;
+
+  text-shadow:
+    0 0 10px #ff3366,
+    0 0 25px #ff3366,
+    0 0 60px #ff3366;
+
+  animation:
+    pulseGameOver 1.4s infinite;
+}
+
+@keyframes pulseGameOver{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.04);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
+
+#final-score{
+
+  color:#00ffff;
+
+  font-size:32px;
+
+  margin-bottom:35px;
+
+  text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #00ffff;
+}
+
+/* MOBILE */
+
+@media (max-width:700px){
+
+  #score,
+  #lives{
+    font-size:18px;
+    padding:8px 12px;
+  }
+
+  #play,
+  #restart{
+    font-size:22px;
+    padding:16px 36px;
+  }
+
+}/*=========================
+  NEON ASSAULT 2.0 LOGO
+=========================*/
+
+#logo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-bottom:40px;
+}
+
+#logo span:first-child{
+
+  font-size:72px;
+  font-weight:900;
+
+  color:#00ffff;
+
+  letter-spacing:8px;
+
+  animation:
+      neonPulse 2s infinite;
+
+  text-shadow:
+      0 0 10px #00ffff,
+      0 0 25px #00ffff,
+      0 0 60px #00ffff;
+
+}
+
+#logo span:last-child{
+
+  margin-top:-10px;
+
+  font-size:46px;
+
+  letter-spacing:14px;
+
+  color:white;
+
+  text-shadow:
+      0 0 10px white,
+      0 0 25px cyan;
+
+}
+
+@keyframes neonPulse{
+
+  0%{
+      transform:scale(1);
+      filter:brightness(1);
+  }
+
+  50%{
+      transform:scale(1.05);
+      filter:brightness(1.5);
+  }
+
+  100%{
+      transform:scale(1);
+      filter:brightness(1);
+  }
+
+}
