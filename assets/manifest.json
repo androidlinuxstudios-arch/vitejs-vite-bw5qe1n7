@@ -1,0 +1,28 @@
+{
+  "bg": {
+    "nebula": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/background-3.png"
+  },
+  "sprites": {
+    "player": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/playerShip1_blue.png",
+    "enemy1": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Enemies/enemyBlue1.png",
+    "enemy2": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Enemies/enemyRed1.png",
+    "explosion": "https://raw.githubusercontent.com/mvasilkov/space-shooter-redux/master/src/assets/effects/explosion.png"
+  },
+  "bgm": {
+    "ogg": "https://opengameart.org/sites/default/files/short-synth-loop.ogg",
+    "mp3": "https://opengameart.org/sites/default/files/short-synth-loop.mp3",
+    "volume": 0.45,
+    "attribution": {
+      "title": "Short Synth Loop",
+      "author": "killerfishred",
+      "source": "https://opengameart.org/content/short-synth-loop",
+      "license": "CC0"
+    }
+  },
+  "sfx": {
+    "laser": { "ogg": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/laserSmall.ogg", "mp3": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/laserSmall.mp3", "volume": 0.6 },
+    "explosion": { "ogg": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/explosion.ogg", "mp3": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/explosion.mp3", "volume": 0.85 },
+    "hit": { "ogg": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/hit.ogg", "mp3": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/hit.mp3", "volume": 0.7 },
+    "powerup": { "ogg": "https://opengameart.org/sites/default/files/powerup.ogg", "mp3": "https://opengameart.org/sites/default/files/powerup.mp3", "volume": 0.7 }
+  }
+}
