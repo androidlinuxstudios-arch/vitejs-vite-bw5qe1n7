@@ -1,0 +1,5 @@
+Redeploy trigger file
+
+This file was created to force a no-op commit and trigger a redeploy of the fix/mainjs branch.
+
+Timestamp: 2026-07-23T18:58:00Z
