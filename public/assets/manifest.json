@@ -1,16 +1,16 @@
 {
   "bg": {
-    "nebula": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/background-3.png"
+    "nebula": "/assets/images/background-3.png"
   },
   "sprites": {
-    "player": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/playerShip1_blue.png",
-    "enemy1": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Enemies/enemyBlue1.png",
-    "enemy2": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Enemies/enemyRed1.png",
-    "explosion": "https://raw.githubusercontent.com/mvasilkov/space-shooter-redux/master/src/assets/effects/explosion.png"
+    "player": "/assets/images/playerShip1_blue.png",
+    "enemy1": "/assets/images/enemyBlue1.png",
+    "enemy2": "/assets/images/enemyRed1.png",
+    "explosion": "/assets/images/explosion.png"
   },
   "bgm": {
-    "ogg": "https://opengameart.org/sites/default/files/short-synth-loop.ogg",
-    "mp3": "https://opengameart.org/sites/default/files/short-synth-loop.mp3",
+    "ogg": "/assets/bgm/short-synth-loop.ogg",
+    "mp3": "/assets/bgm/short-synth-loop.mp3",
     "volume": 0.45,
     "attribution": {
       "title": "Short Synth Loop",
@@ -20,9 +20,9 @@
     }
   },
   "sfx": {
-    "laser": { "ogg": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/laserSmall.ogg", "mp3": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/laserSmall.mp3", "volume": 0.6 },
-    "explosion": { "ogg": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/explosion.ogg", "mp3": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/explosion.mp3", "volume": 0.85 },
-    "hit": { "ogg": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/hit.ogg", "mp3": "https://raw.githubusercontent.com/kenneyNL/space-shooter-redux/master/PNG/Sound/hit.mp3", "volume": 0.7 },
-    "powerup": { "ogg": "https://opengameart.org/sites/default/files/powerup.ogg", "mp3": "https://opengameart.org/sites/default/files/powerup.mp3", "volume": 0.7 }
+    "laser": { "ogg": "/assets/sfx/laserSmall.ogg", "mp3": "/assets/sfx/laserSmall.mp3", "volume": 0.6 },
+    "explosion": { "ogg": "/assets/sfx/explosion.ogg", "mp3": "/assets/sfx/explosion.mp3", "volume": 0.85 },
+    "hit": { "ogg": "/assets/sfx/hit.ogg", "mp3": "/assets/sfx/hit.mp3", "volume": 0.7 },
+    "powerup": { "ogg": "/assets/sfx/powerup.ogg", "mp3": "/assets/sfx/powerup.mp3", "volume": 0.7 }
   }
 }
